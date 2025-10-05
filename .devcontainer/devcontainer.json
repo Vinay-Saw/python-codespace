@@ -1,0 +1,26 @@
+{
+  // A name for your dev container.
+  "name": "ga2-fe7f5d",
+
+  // We'll use a base Ubuntu image for our container.
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+
+  // Features to add to the dev container.
+  "features": {
+    // This adds Python to our environment as requested.
+    "ghcr.io/devcontainers/features/python:1": {}
+  },
+
+  // Specifies VS Code extensions to install.
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "astral-sh.uv",
+        "ms-python.python"
+      ]
+    }
+  },
+
+  // A command to run after the container is created.
+  "postCreateCommand": "uv pip install fastapi"
+}
